@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "author": "ARUVI B",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-st-nucleo-l031k6", "id": "nucleo", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -3.6, "left": 128.6, "attrs": { "color": "red" } }
+  ],
+  "connections": [
+    [ "$serialMonitor:TX", "nucleo:VCP_RX", "", [] ],
+    [ "$serialMonitor:RX", "nucleo:VCP_TX", "", [] ],
+    [ "led1:C", "nucleo:GND.2", "green", [ "v0" ] ],
+    [ "led1:A", "nucleo:D13", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
